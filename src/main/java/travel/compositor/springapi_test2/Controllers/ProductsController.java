@@ -7,6 +7,7 @@ import org.springframework.web.bind.annotation.*;
 import travel.compositor.springapi_test2.Exceptions.Products.BadRequest;
 import travel.compositor.springapi_test2.Models.Product;
 import travel.compositor.springapi_test2.Services.ProductsService;
+import org.springframework.boot.autoconfigure.jdbc.DataSourceProperties;
 
 import java.util.List;
 
@@ -32,7 +33,7 @@ public class ProductsController {
         }
     }
 
-    @GetMapping("products")
+    @GetMapping("/products")
     public ResponseEntity<List<Product>> GetAllProducts() {
         try {
             List<Product> response = _productsService.GetAllProducts();

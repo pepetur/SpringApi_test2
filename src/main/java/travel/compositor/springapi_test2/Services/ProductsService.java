@@ -27,6 +27,7 @@ public class ProductsService {
     }
 
     public List<Product> GetAllProducts() {
+        List<Product> test = _productsRepository.AllProducts();
         return new ArrayList<>(); //TODO: do the method
     }
 
